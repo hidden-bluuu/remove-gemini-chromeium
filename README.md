@@ -14,3 +14,8 @@ Removes Google AI Overviews and AI Mode from Google Search.
 - Popup: on/off switch, counter, and "Show AI for this search".
 - Shortcut Alt+Shift+A toggles the extension (change it at `chrome://extensions/shortcuts`).
 - Settings sync across your Chrome profile.
+
+## License
+[MIT](LICENSE). You can use, copy, change and share it freely, as long as the license notice stays with it.
+
+Google is a trademark of Google LLC. This project is independent and is not affiliated with, endorsed by or sponsored by Google or their subsidiary Alphabet Inc.
