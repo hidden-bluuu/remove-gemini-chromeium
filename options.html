@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>No Google AI settings</title>
+  <link rel="stylesheet" href="ui.css">
+</head>
+<body>
+  <main class="page">
+    <header>
+      <h1>No Google AI</h1>
+      <p class="muted">Changes are saved automatically.</p>
+    </header>
+
+    <h2>General</h2>
+    <div class="card">
+      <div class="item row">
+        <div>
+          <label class="title" for="enabled">Enabled</label>
+          <p class="desc">Master switch. Shortcut: Alt+Shift+A.</p>
+        </div>
+        <label class="switch"><input type="checkbox" id="enabled" data-key="enabled"><span></span></label>
+      </div>
+    </div>
+
+    <h2>How to remove AI answers</h2>
+    <div class="card">
+      <div class="item">
+        <label class="choice">
+          <input type="radio" name="method" value="web" data-key="method">
+          <span>
+            <span class="title">Use the Web tab (recommended)</span>
+            <p class="desc">Searches open Google's plain "Web" results, which never include AI Overviews. Also drops knowledge panels and shopping blocks. Images, Videos and other tabs are untouched.</p>
+          </span>
+        </label>
+      </div>
+      <div class="item">
+        <label class="choice">
+          <input type="radio" name="method" value="hide" data-key="method">
+          <span>
+            <span class="title">Hide the AI Overview box</span>
+            <p class="desc">Keeps the regular results page and hides the AI box after it loads. Best effort: it looks for the English "AI Overview" heading, so turn on "Force English" below if your Google is in another language.</p>
+          </span>
+        </label>
+      </div>
+      <div class="item row">
+        <div>
+          <label class="title" for="forceEnglish">Force English</label>
+          <p class="desc">Adds <code>hl=en</code> to searches so Google's interface is in English.</p>
+        </div>
+        <label class="switch"><input type="checkbox" id="forceEnglish" data-key="forceEnglish"><span></span></label>
+      </div>
+    </div>
+
+    <h2>Clean up</h2>
+    <div class="card">
+      <div class="item row">
+        <div>
+          <label class="title" for="hideAiMode">Hide "AI Mode"</label>
+          <p class="desc">Removes the AI Mode tab and button.</p>
+        </div>
+        <label class="switch"><input type="checkbox" id="hideAiMode" data-key="hideAiMode"><span></span></label>
+      </div>
+      <div class="item row">
+        <div>
+          <label class="title" for="hideAds">Hide ads</label>
+          <p class="desc">Removes sponsored results at the top and bottom.</p>
+        </div>
+        <label class="switch"><input type="checkbox" id="hideAds" data-key="hideAds"><span></span></label>
+      </div>
+      <div class="item row">
+        <div>
+          <label class="title" for="hidePaa">Hide "People also ask"</label>
+          <p class="desc">Best effort, matches the English heading.</p>
+        </div>
+        <label class="switch"><input type="checkbox" id="hidePaa" data-key="hidePaa"><span></span></label>
+      </div>
+    </div>
+
+    <h2>Statistics and shortcuts</h2>
+    <div class="card">
+      <div class="item row">
+        <p><strong id="count">0</strong> searches kept AI-free</p>
+        <button class="secondary" id="reset">Reset</button>
+      </div>
+      <div class="item row">
+        <p>Toggle shortcut (Alt+Shift+A by default)</p>
+        <button class="secondary" id="shortcuts">Change</button>
+      </div>
+    </div>
+
+    <p class="muted" style="margin-top:24px">
+      On a results page, the toolbar popup has a "Show AI for this search" button if you want the AI answer just once.
+    </p>
+  </main>
+  <div id="status" role="status">Saved</div>
+
+  <script src="defaults.js"></script>
+  <script src="options.js"></script>
+</body>
+</html>

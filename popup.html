@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>No Google AI</title>
+  <link rel="stylesheet" href="ui.css">
+</head>
+<body class="popup">
+  <div class="row">
+    <h1>No Google AI</h1>
+    <label class="switch" title="Turn the extension on or off">
+      <input type="checkbox" id="enabled" aria-label="Enabled">
+      <span></span>
+    </label>
+  </div>
+
+  <div class="stat">
+    <strong id="count">0</strong>
+    <span class="muted">searches kept AI-free</span>
+  </div>
+
+  <button class="primary" id="aiBtn" hidden></button>
+
+  <footer>
+    <button class="link" id="settings">Settings</button>
+  </footer>
+
+  <script src="defaults.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
